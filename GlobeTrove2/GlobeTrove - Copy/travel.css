@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    display: flex;
+    justify-content: center;   
+     width: 100%;
+    height: 100vh;
+    font-family: 'Playfair Display';
+}
+.header{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 200px;
+    font-size: 5rem;
+    background-color: white;
+}
+
+
+.main{
+    width: 100%;
+    margin: 131px 5% 5% 0;
+    border-right: 3px solid black;
+    display: flex;
+}
+
+.slider{
+    width: 60%;
+    height: 100%;
+}
+.img{
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.prev{
+    width: 50px;
+    height: 40px;
+    position: absolute;
+    display: inline-block;
+    bottom: 16%;
+    left: 25%;
+    border: 1px solid white;
+    transform: translate(-50%, -50%);
+    color: white;
+    cursor: pointer;
+    transition: border-color 0.5s, background-color 0.5s, color 0.5s;
+    background-color: #444;
+}
+.prev:hover{
+    background-color: #fff;
+    border-color: transparent;
+    color: #444;
+}
+
+.next{
+    width: 50px;
+    height: 40px;
+    position: absolute;
+    display: inline-block;
+    bottom: 16%;
+    left: 29%;
+    border: 1px solid white;
+    transform: translate(-50%, -50%);
+    color: white;
+    cursor: pointer;
+    transition: border-color 0.5s, background-color 0.5s, color 0.5s;
+    background-color: #444;
+}
+.next:hover{
+    background-color: #fff;
+    border-color: transparent;
+    color: #444;
+}
+
+
+#shop{
+    width: 22rem;
+    height: 2.2rem;
+    font-size: 1.2rem;
+    margin: 33% 10% 0 41%;
+    background: white;
+    border: 2px solid black;
+    text-align: left;
+    padding-left: 10px;
+    transition: border-color 0.5s, background-color 0.5s, color 0.5s;
+}
+#shop:hover{
+    background-color: #e4c55f;
+    border-color: transparent;
+    color: #000000;
+    border-color: rgb(246, 145, 22);
+}
+.continut{
+    width: 40%;
+    right: 0;
+    height: 100%;
+}
+.text{
+    font-size: 1.2rem;
+    height: 30px;
+    width: 80%;  
+    margin: 10% 10% 0 10%;
+    text-align: right;
+}
+.titlu{
+    font-size: 5.2rem;
+    margin: 15% 0 0 -23.45%;
+}
+
+.navbar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar #two img{
+    display: flex;
+    width: 40px;
+}
+
+.menu{
+    display: flex;
+    width: 100%; 
+}
+.navbar #one{
+    list-style:none;
+    padding: 0;
+    width: 50%;
+    display: inline-flex;
+    justify-content: flex-end;
+}
+.header p{
+    font-size: 2.5rem;
+    display: flex;
+    position: relative;
+    top: 1rem;
+    left: 2rem;
+}
+.header #menu-logo{
+    width: 4rem;
+    height: 50px;
+    margin: 37px 70px;
+}
+.navbar #two{
+    font-size: 20px;
+    list-style:none;
+    width: 50%;
+    padding: 0;
+    display: flex;
+    padding-left: 10rem;
+}
+.navbar #one li{
+    display: flex;
+    margin: 0 30px;
+}
+.navbar #two li{
+    display: flex;
+    margin: 0 30px;
+}
+.navbar #one a{
+    font-size: 22px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    display: block;
+    position: relative;
+    padding: 4px 0;
+}
+
+.navbar #two a{
+    display: block;
+    position: relative;
+    padding: 4px 0;
+}
+
+.navbar #one a::before{
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    transition: 0.5s transform ease;
+    transform: scale3d(0,1,1);
+    transform-origin: 0 50%;
+}
+.navbar #one a:hover::before{
+    transform: scale3d(1,1,1);
+}
+.navbar #one a::before{
+    transform-origin: 50% 50%;
+    background: rgb(154, 68, 68);
+}
+
+@media only screen and (min-width: 412px){
+    body{
+        display: flex;
+        justify-content: center;    
+        width: 100%;
+        height: 100%;
+        font-family: 'Playfair Display';
+    }
+    .header{
+        position: fixed;
+        width: 100%;
+        height: 130px;
+    }
+    .main{
+        width: 100%;
+        border: none;
+        display: block;
+    }
+    .header #menu-logo{
+        display: none;
+    }
+    .slider{
+        width: 105%;
+        height: 55%;
+    }
+    .prev{
+        width: 35px;
+        height: 25px;
+        position: absolute;
+        bottom: 57%;
+        left: 40%;
+        border: 1px solid white;
+        transform: translate(-50%, -50%);
+        color: white;
+        cursor: pointer;
+        transition: border-color 0.5s, background-color 0.5s, color 0.5s;
+        background-color: #444;
+    }
+    .next{
+        width: 35px;
+        height: 25px;
+        position: absolute;
+        bottom: 57%;
+        left: 60%;
+        border: 1px solid white;
+        transform: translate(-50%, -50%);
+        color: white;
+        cursor: pointer;
+        transition: border-color 0.5s, background-color 0.5s, color 0.5s;
+        background-color: #444;
+    }
+    #shop{
+        width: 18rem;
+        height: 2.1rem;
+        font-size: 1.1rem;
+        position: relative;
+        top: 220px;
+    }
+    .text{
+        font-size: 1rem;
+        height: 10px;
+        width: 300px;
+        margin-top: 40px; 
+        text-align: center; 
+        margin-left: 25%;
+    }
+    .titlu{
+        font-size: 2rem;
+        margin-left: 55%;
+        margin-top: 30px;
+    }
+
+    .navbar #two img{
+        display: flex;
+        width: 30px;
+        height: 30px;
+    } 
+    .menu{
+        display: block;
+        width: 100%; 
+    }
+    .navbar #one{
+        width: 100%;
+        height: 60px;
+        bottom: 90px;
+        margin-left: -15px;
+        display: flex;
+        position: relative;
+    }
+    .navbar #two{
+        display: flex;
+        top: 70px;
+        padding-left: 33%;
+        position: relative;
+    }
+    .header p{
+       display: none;
+    }
+    .navbar{
+        justify-content: center;
+    }
+    .navbar #one li{
+        display: inline;
+        margin: 0 20px;
+        top: 0;
+    }
+    .navbar #two li{
+        display: inline-block;
+        margin-top: 0;
+        margin-left: -3px;
+        
+    }
+    .navbar #one a{
+        font-size: 18px;
+        display: inline;
+    }
+}
+    @media only screen and (min-width: 360px){
+        body{
+            display: flex;
+            justify-content: center;    
+            width: 100%;
+            height: 100%;
+            font-family: 'Playfair Display';
+        }
+        .header{
+            position: fixed;
+            width: 100%;
+            height: 130px;
+        }
+        .main{
+            width: 100%;
+            border: none;
+            display: block;
+        }
+        .header #menu-logo{
+            display: none;
+        }
+        .slider{
+            width: 105%;
+            height: 55%;
+        }
+        .prev{
+            width: 35px;
+            height: 25px;
+            position: absolute;
+            bottom: 54%;
+            left: 40%;
+            border: 1px solid white;
+            transform: translate(-50%, -50%);
+            color: white;
+            cursor: pointer;
+            transition: border-color 0.5s, background-color 0.5s, color 0.5s;
+            background-color: #444;
+        }
+        .next{
+            width: 35px;
+            height: 25px;
+            position: absolute;
+            bottom: 54%;
+            left: 60%;
+            border: 1px solid white;
+            transform: translate(-50%, -50%);
+            color: white;
+            cursor: pointer;
+            transition: border-color 0.5s, background-color 0.5s, color 0.5s;
+            background-color: #444;
+        }
+        #shop{
+            width: 18rem;
+            height: 2.1rem;
+            font-size: 1.1rem;
+            position: relative;
+            top: 220px;
+        }
+        .text{
+            font-size: 1rem;
+            height: 10px;
+            width: 300px;
+            margin-top: 40px; 
+            text-align: center; 
+            margin-left: 25%;
+        }
+        .titlu{
+            font-size: 2rem;
+            margin-left: 55%;
+            margin-top: 30px;
+        }
+    
+        .navbar #two img{
+            display: flex;
+            width: 30px;
+            height: 30px;
+        } 
+        .menu{
+            display: block;
+            width: 100%; 
+        }
+        .navbar #one{
+            width: 100%;
+            height: 60px;
+            bottom: 90px;
+            padding: 5.5%;
+            display: flex;
+            position: relative;
+        }
+        .navbar #two{
+            display: flex;
+            top: 70px;
+            padding-left: 33%;
+            position: relative;
+        }
+        .header p{
+           display: none;
+        }
+        .navbar{
+            justify-content: center;
+        }
+        .navbar #one li{
+            display: inline;
+            margin: 0 20px;
+            top: 0;
+        }
+        .navbar #two li{
+            display: inline-block;
+            margin-top: 0;
+            margin-left: -3px;
+            
+        }
+        .navbar #one a{
+            font-size: 18px;
+            display: inline;
+        }
+}
+@media only screen and (min-width: 1920px){
+    body{
+        display: flex;
+        justify-content: center;   
+         width: 100%;
+        height: 100vh;
+        font-family: 'Playfair Display';
+    }
+    .header{
+        height: 100px;
+    }
+    .main{
+        width: 100%;
+        margin: 131px 5% 5% 0;
+        border-right: 4px solid black;
+        display: flex;
+    }   
+    .slider{
+        width: 60%;
+        height: 100%;
+    }
+    .img{
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+    
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .prev{
+        width: 62px;
+        height: 50px;
+        position: absolute;
+        display: inline-block;
+        bottom: 13%;
+        left: 25%;
+        border: 1px solid white;
+        transform: translate(-50%, -50%);
+        color: white;
+        cursor: pointer;
+        transition: border-color 0.5s, background-color 0.5s, color 0.5s;
+        background-color: #444;
+    }
+    .next{
+        width: 62px;
+        height: 50px;
+        bottom: 13%;
+        left: 32%
+    }
+    #shop{
+        width: 24rem;
+        height: 2.6rem;
+        font-size: 1.4rem;
+        margin: 15% 10% 0 41%;
+
+    }
+    .text{
+        font-size: 1.5rem;
+        height: 30px;
+        width: 80%;  
+        margin: 10% 10% 0 10%;
+        text-align: right;
+    }
+    .titlu{
+        font-size: 5.2rem;
+        margin: 15% 0 0 -23.45%;
+    }
+    
+    .navbar{
+        width: 100%;
+        height: 100%;
+        display: inline;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar #two img{
+        display: flex;
+        position: relative;
+        bottom: 25px;
+        left: -50px;
+        width: 50px;
+        height: 50px;
+    }   
+    .menu{
+        display: inline; 
+    }
+    .header #menu-logo{
+        display: flex;
+        width: 4rem;
+        height: 50px;
+        margin: 45px 70px;
+    }
+    .navbar #one{
+        list-style:none;
+        padding: 0;
+        margin-top: 70px;
+        width: 50%;
+        display: inline-flex;
+        position: relative;
+        float: right;
+    }
+    .header p{
+        font-size: 2.6rem;
+        display: flex;
+        position: relative;
+        top: 1rem;
+        left: 2rem;
+    }
+    .navbar #two{
+        font-size: 20px;
+        list-style:none;
+        width: 50%;
+        padding: 0;
+        display: flex;
+        padding-left: 10rem;
+    }
+    .navbar #one li{
+        display: flex;
+        margin: 0 30px;
+        position: relative;
+        right: 0;
+    }
+    .navbar #two li{
+        display: flex;
+        margin: 0 30px;
+    }
+    .navbar #one a{
+        font-size: 30px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: black;
+        display: block;
+        position: relative;
+        padding: 4px 0;
+    }
+    
+    .navbar #two a{
+        display: block;
+        position: relative;
+        padding: 4px 0;
+    }
+    
+    .navbar #one a::before{
+        content: "";
+        width: 100%;
+        height: 4px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: #fff;
+        transition: 0.5s transform ease;
+        transform: scale3d(0,1,1);
+        transform-origin: 0 50%;
+    }
+    .navbar #one a:hover::before{
+        transform: scale3d(1,1,1);
+    }
+    .navbar #one a::before{
+        transform-origin: 50% 50%;
+        background: rgb(154, 68, 68);
+    }
+}

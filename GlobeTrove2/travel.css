@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+/* <600px, >601px, 768px, 992px, 1200px*/
+*{
+    margin: 0;
+    padding: 0; 
+}
+body{
+    display: flex;
+    justify-content: center;   
+    width: 100%;
+    font-family: 'Playfair Display';
+}
+.header{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    margin-top: 100px;
+    display: block;
+}
+.slider{
+    width: 100%;
+    height: 45%;
+}
+.img{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.buttons{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+    padding-left: 30px;
+}
+.prev{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border: 1px solid white;
+    transform: translate(-50%, -50%);
+    color: white;
+    cursor: pointer;
+    transition: border-color 0.5s, background-color 0.5s, color 0.5s;
+    background-color: #444;
+}
+.prev:hover{
+    background-color: #fff;
+    border-color: transparent;
+    color: #444;
+}
+.next{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    transform: translate(-50%, -50%);
+    color: white;
+    cursor: pointer;
+    transition: border-color 0.5s, background-color 0.5s, color 0.5s;
+    background-color: #444;
+}
+.next:hover{
+    background-color: #fff;
+    border-color: transparent;
+    color: #444;
+}
+#shop{
+    width: 20rem;
+    height: 2.2rem;
+    font-size: 1.2rem;
+    margin: 15% 10%;
+    background: white;
+    border: 2px solid black;
+    text-align: left;
+    padding-left: 10px;
+    transition: border-color 0.5s, background-color 0.5s, color 0.5s;
+}
+.shop{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#shop:hover{
+    background-color: #e4c55f;
+    border-color: transparent;
+    color: #000000;
+    border-color: rgb(246, 145, 22);
+}
+.continut{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.text{
+    font-size: 1.1rem;
+    width: 80%;
+    max-width: 700px;  
+    text-align: center;
+}
+#text{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.titlu{
+    font-size: 3rem;
+    width: 100%;
+    margin : 40px 0 0 0;
+}
+.navbar{
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar #two img{
+    display: flex;
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+.menu{
+    display: block;
+    width: 100%; 
+    height: 100%;
+}
+.navbar #one{
+    list-style:none;
+    width: 100%;
+    height: 30%;
+    display: flex;
+}
+.header p{
+    display: none;
+}
+.header #menu-logo{
+    display: none;
+    width: 4rem;
+}
+.navbar #two{
+    font-size: 20px;
+    list-style:none;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    padding-top: 22px;
+}
+.navbar #one li{
+    display: flex;
+    margin: 0 20px;
+}
+.navbar #two li{
+    display: flex;
+    margin: 0 30px;
+    position: relative;
+    right: 4rem;
+}
+.navbar #one a{
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    display: block;
+    position: relative;
+}
+.navbar #two a{
+    display: block;
+    position: relative;
+    padding: 4px 0;
+}
+.navbar #one a::before{
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    transition: 0.5s transform ease;
+    transform: scale3d(0,1,1);
+    transform-origin: 0 50%;
+}
+.navbar #one a:hover::before{
+    transform: scale3d(1,1,1);
+}
+.navbar #one a::before{
+    transform-origin: 50% 50%;
+    background: rgb(154, 68, 68);
+}
+
+@media only screen and (max-width: 601px){
+    .navbar #one{
+        justify-content: center;
+    }
+    .prev{
+        width: 45px;
+        height: 35px;
+    }
+    .next{
+        width: 45px;
+        height: 35px;
+    }
+    .navbar #one a{
+        font-size: 23px;
+    }
+    .titlu{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+    #shop{
+        width: 22rem;
+        height: 2.5rem;
+        font-size: 1.4rem;
+        margin: 15% 5%;
+    }
+    .buttons{
+        gap: 9%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media only screen and (min-width: 601px){
+    .navbar #one{
+        justify-content: center;
+    }
+    .prev{
+        width: 45px;
+        height: 35px;
+    }
+    .next{
+        width: 45px;
+        height: 35px;
+    }
+    .navbar #one a{
+        font-size: 23px;
+    }
+    .titlu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+    #shop{
+        width: 22rem;
+        height: 2.5rem;
+        font-size: 1.4rem;
+        margin: 15% 5%;
+    }
+    .buttons{
+        gap: 9%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+@media only screen and (min-width: 992px){
+    .main{                                                                                                                                                                                                                                                                                                                                                    
+        display: flex;
+        margin: 131px 5% 5% 0;
+        width: 100%;
+    }
+    .slider{
+        position: absolute;
+        height: 100%;
+        width: 60%;
+    }
+    .continut{
+        right: 0;
+        width: 40%;
+        height: 100%;
+        position: absolute;
+    }
+    .text{
+        font-size: 1.2rem;
+        height: 20px;
+        width: 85%;  
+        text-align: right;
+    }
+    .titlu{
+        font-size: 4rem;
+        margin: 10% 0 0 -31%;
+    }
+   .text{
+    height: 100%;
+    font-size: 1.1rem;
+   }
+   .buttons{
+    position: absolute; 
+    padding-left: 30px; 
+    }
+    .menu{
+        display: flex;
+    }
+    .navbar #one{
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar #two{
+        float: left;
+        display: flex;
+        align-items: center;  
+        justify-content: end;
+    }
+    .navbar #one a{
+        font-size: 24px;
+    }
+    .navbar #one li{
+        margin: 18px;
+    }
+}
+@media only screen and (min-width: 1146px){
+    .titlu{
+        font-size: 4.3rem;
+        margin: 10% 0 0 -33%;
+    }
+    .header #menu-logo{
+        display: flex;
+        height: 58px;
+        margin: 37px 0px;
+    }
+    .header p{
+        display: flex;
+        position: relative;
+        font-size: 2rem;
+        right: 2rem;
+    }
+}
+@media only screen and (min-width: 1290px){
+    .titlu{
+        font-size: 4.5rem;
+        margin: 10% 0 0 -34%;
+    }
+     .header p{
+        font-size: 2.5rem;
+    }
+    .navbar #two img{
+        width: 40px;
+        height: 40px;
+    }
+    .navbar #one a{
+        font-size: 25px;
+    }
+}
+@media only screen and (min-width: 1480px){
+    .titlu{
+        font-size: 5.2rem;
+        margin: 10% 0 0 -33%;
+    } 
+    .header #menu-logo{
+        position: relative;
+        padding-right: 30px;
+}
+}
+@media only screen and (min-width: 1800px){
+    .titlu{
+        margin: 10% 0 0 -37%;
+    } 
+    .header p{
+        font-size: 3rem;
+    }
+    .navbar #one a{
+        font-size: 30px;
+    }
+    .text{
+        font-size: 1.6rem;
+    }
+    #shop{
+        width: 30rem;
+        height: 60px;
+        font-size:2rem;
+    }
+    .navbar #two img{
+        width: 50px;
+        height: 50px;
+        padding-right: 20px;
+    }
+    .navbar #one{
+        padding-left: 30px;
+    }
+}

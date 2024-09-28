@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;4
+    
+}
+.container{
+    padding: 2rem 7rem;
+    background: #fff9fb;
+    border-radius: 50px 20px 50px 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+
+}
+.result-images{
+    margin-top: 20px;
+    display: flex;
+    column-gap: 7rem;
+}
+.container.start .user-result{
+    transform-origin: left;
+    animation: userShake 0.7s ease infinite;
+}
+@keyframes userShake {
+    50%{
+        transform: rotate(10deg);
+
+    }
+}
+.container.start .computer-result{
+    transform-origin: right;
+    animation: compShake 0.7s ease infinite;
+}
+@keyframes compShake {
+    50%{
+        transform: rotate(-10deg);
+        
+    }
+}
+.result-images img{
+    width: 150px;
+}
+.user-result img{
+    transform: rotate(90deg);
+}
+.computer-result img{
+    transform: rotate(-90deg) rotateY(180deg);
+}
+.result{
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    color: #921A40;
+}
+.option-image img{
+    width: 70px;
+}
+.option-images{
+    display: flex;
+    align-items: center;
+    margin-top: 2.5rem;
+    justify-content: space-between;
+}
+.option-images .option-images{
+    pointer-events: none;
+}
+.option-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+.option-image:hover{
+    opacity: 1;
+}
+.option-image.active{
+    opacity: 1;
+}
+.option-image img{
+    pointer-events: none;
+}
+.option-image p{
+    color: #C75B7A;
+    font-size: 1.25rem;
+    margin-top: .7rem;
+    pointer-events: none;
+}
+
+#home {
+    clip-path: url(#cache);
+  }
+  
+  #red {
+    fill: none;
+    opacity: 0.15;
+    stroke: #fa0060;
+    stroke-width: 12;
+    stroke-miterlimit:10;
+    animation: show 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; 
+  }
+  
+  #purple {
+    fill: none;
+    opacity: 0.15;
+    stroke: #a40f88;
+    stroke-width: 10;
+    stroke-miterlimit:10;
+    animation: show 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  #dark-red {
+    fill: none;
+    opacity: 0.15;
+    stroke: #950e0e;
+    stroke-width: 6;
+    stroke-miterlimit:10;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 800;
+    animation: draw 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;    
+  }
+  
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+   }
+      }
+  
+  @keyframes show {
+    0% {
+      opacity: 0.15;
+   }
+    50% {
+      opacity: 0.2;
+   }
+    100% {
+      opacity: 0.15;
+   }
+      }
+  
