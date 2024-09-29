@@ -1,3 +1,4 @@
+
 body{
     background: #8EACCD;
     font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -9,7 +10,7 @@ body{
 }
 #weather-container{
     background: rgba(255, 255, 255, .2);
-    max-width: 400px;
+    min-width: 300px;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 8px 32px rgba(0,0, 0, .1);
@@ -30,7 +31,7 @@ input{
     margin-top: 20px;
 }
 button{
-    background: #8088ff;
+    background: #676ca5;
     color: white;
     padding: 10px;
     border: none;
@@ -41,26 +42,39 @@ button{
     font-size: 16px;
 }
 button:hover{
-    background: #D2E0FB;
+    background: #8a8cd4;
+}
+.info{
+    border-radius: 15px;
+    background: #3050790c;
+    display: none;
+    margin-left: 30px;
 }
 #temp-div p{
     font-size: 60px;
-    margin-top: -30px;
+    margin-top: -300px;
+    margin-left: 250px;
+    width: 150px;
 }
 #weather-info{
-    font-size: 20px;
+    width: 200px;
+    font-size: 22px;
+    text-align: center;
+    margin-left: 220px;
 }
 #weather-icon{
     width: 200px;
     height: 200px;
-    margin: 0 auto 10px;
-    margin-bottom: 0;
+    margin-left: 50px;
+    margin-bottom: 150px;
     display: none;
 }
 #hourly-forecast{
-    margin-top: 50px;
-    overflow-x: auto;
-    white-space: nowrap;
+    width: 450px; 
+    margin-top: 60px;
+    overflow-x: scroll;
+    scrollbar-color: rgb(90, 107, 161) rgba(185, 184, 187, 0);
+    scrollbar-width: thin;
     display: flex;
     justify-content: space-between;
 }
@@ -72,14 +86,11 @@ button:hover{
     align-items: center;
     margin-right: 10px;
     color: white;
+    padding-bottom: 30px;
 }
 .hourly-item img{
     width: 30px;
     height: 30px;
     margin-bottom: 5px;
-}
-#hourly-heading{
-    color: #fff;
-    margin-top: 10px;
 }
 
