@@ -1,6 +1,14 @@
+let input = document.getElementById("city");
+input.addEventListener("keydown", function(event) {
+    if( event.keyCode === 13){
+        event.preventDefault();
+        document.getElementById("search").click();
+    }
+})
+
 function getWeather(){
     const apiKey = 'f5df27c4882ab0e4fe97e588b29077b7';
-    const city = document.getElementElementById('city').value;
+    const city = document.getElementById('city').value;
     if(!city){
         alert('Please enter a city!');
         return;
@@ -35,8 +43,9 @@ function displayWeather(data){
     const weatherInfoDiv = document.getElementById('weather-info');
     const weatherIcon = document.getElementById('weather-icon');
     const hourlyForecastDiv = document.getElementById('hourly-forecast');
+    const infoDiv = document.querySelector(".info");
 
-    // Clear previous content
+       // Clear previous content
     weatherInfoDiv.innerHTML = '';
     hourlyForecastDiv.innerHTML = '';
     tempDivInfo.innerHTML = '';
@@ -58,7 +67,8 @@ function displayWeather(data){
     weatherInfoDiv.innerHTML = weatherHtml;
     weatherIcon.src = iconUrl;
     weatherIcon.alt = description;
-
+    
+    infoDiv.style.display = 'block';
     showImage();
     }
 }
